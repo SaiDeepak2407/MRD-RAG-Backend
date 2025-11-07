@@ -13,6 +13,17 @@ NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 COHERE_KEY = os.getenv("COHERE_KEY")
 
+missing_vars = [k for k, v in {
+    "NEO4J_URI": NEO4J_URI,
+    "NEO4J_USER": NEO4J_USER,
+    "NEO4J_PASSWORD": NEO4J_PASSWORD,
+    "COHERE_KEY": COHERE_KEY
+}.items() if not v]
+
+if missing_vars:
+    print(f"❌ Missing environment variables: {', '.join(missing_vars)}")
+    sys.exit(1)
+    
 app = FastAPI(title="MRD-RAG Doctor Chatbot API", version="2.9")
 
 app.add_middleware(
