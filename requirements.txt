@@ -1,0 +1,6 @@
+%%writefile requirements.txt
+fastapi
+uvicorn
+cohere
+neo4j
+tqdm
