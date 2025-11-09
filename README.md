@@ -42,23 +42,22 @@ It combines **LLM reasoning** with **graph-based medical knowledge retrieval** f
 
 ## ⚙️ Setup Instructions  
 
-### 1️⃣ Clone the Repository  
-```bash
+###1️⃣ Clone the Repository  
+bash
 git clone https://github.com/yourusername/ragnosis-backend.git
 cd ragnosis-backend
 
-2️⃣ Create and Activate a Virtual Environment
+###2️⃣ Create and Activate a Virtual Environment
 python -m venv venv
 # On macOS/Linux
 source venv/bin/activate
 # On Windows
 venv\Scripts\activate
 
-3️⃣ Install Dependencies
+###3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Add Environment Variables
-
+###4️⃣ Add Environment Variables
 Create a .env file in the project root:
 
 COHERE_KEY=your_cohere_api_key
@@ -68,34 +67,30 @@ NEO4J_PASSWORD=your_neo4j_password
 
 🧠 Run Locally
 uvicorn main:app --host 0.0.0.0 --port 8000
-
-
 Then open your browser → http://127.0.0.1:8000/docs
 
 You’ll see the interactive Swagger UI where you can test your chatbot.
 
 🌐 Deployment on Vercel
 
-Push your backend code to GitHub.
+1.Push your backend code to GitHub.
 
-On Vercel
-, create a New Project and import your repo.
+2.On Vercel, create a New Project and import your repo.
 
-In the setup:
+3.In the setup:
 
-Framework Preset: “Other”
+  Framework Preset: “Other”
 
-Build Command: pip install -r requirements.txt
+  Build Command: pip install -r requirements.txt
 
-Output Directory: .
+  Output Directory: .
 
-Start Command: uvicorn main:app --host 0.0.0.0 --port 8000
+  Start Command: uvicorn main:app --host 0.0.0.0 --port 8000
 
-Add environment variables under Settings → Environment Variables.
+4.Add environment variables under Settings → Environment Variables.
 
-Deploy — your API will go live at:
-
-https://ragnosis.vercel.app
+5.Deploy — your API will go live at:
+  https://ragnosis.vercel.app
 
 🔗 Frontend Integration
 
