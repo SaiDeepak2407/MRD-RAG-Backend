@@ -1,7 +1,1 @@
-fastapi
-uvicorn
-neo4j
-cohere
-python-dotenv
-pydantic
-requests
+
